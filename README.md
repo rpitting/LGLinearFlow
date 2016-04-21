@@ -24,8 +24,8 @@ pod "LGMagnifyingLinearFlowLayout"
 
 ## Author
 
-Luka Gabrić, luka.gabric@gmail.com
-Reiner Pittinger (CocoaPod), rp@digital-wave.de
+- Luka Gabrić, luka.gabric@gmail.com
+- Reiner Pittinger (CocoaPod), rp@digital-wave.de
 
 ## License
 
