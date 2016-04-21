@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206" : 0,
+    "812D9791DDA6B75B4CE5ADC0B8C66F6ADDE6A13D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CE4D71C3-2AC1-4494-A466-1653A1C8B61B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206" : "LGLinearFlow\/",
+    "812D9791DDA6B75B4CE5ADC0B8C66F6ADDE6A13D" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LGMagnifyingLinearFlowLayout",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/LGMagnifyingLinearFlowLayout.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rpitting\/LGLinearFlow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ShareTheMeal\/app-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "812D9791DDA6B75B4CE5ADC0B8C66F6ADDE6A13D"
+    }
+  ]
+}

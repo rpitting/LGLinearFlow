@@ -1,0 +1,14 @@
+PODS:
+  - LGMagnifyingLinearFlowLayout (0.1.0)
+
+DEPENDENCIES:
+  - LGMagnifyingLinearFlowLayout (from `../`)
+
+EXTERNAL SOURCES:
+  LGMagnifyingLinearFlowLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LGMagnifyingLinearFlowLayout: e357fc0c4cc87fa05ef2344e4639756ded266361
+
+COCOAPODS: 0.39.0

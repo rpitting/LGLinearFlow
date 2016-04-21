@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LGMagnifyingLinearFlowLayout_Example', :exclusive => true do
+  pod 'LGMagnifyingLinearFlowLayout', :path => '../'
+end
+
+target 'LGMagnifyingLinearFlowLayout_Tests', :exclusive => true do
+  pod 'LGMagnifyingLinearFlowLayout', :path => '../'
+
+  
+end

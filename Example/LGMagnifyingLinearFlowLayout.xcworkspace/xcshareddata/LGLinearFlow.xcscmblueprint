@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "812D9791DDA6B75B4CE5ADC0B8C66F6ADDE6A13D" : 0,
+    "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "01915E65-4F11-4859-B399-5C0B1A53DF10",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "812D9791DDA6B75B4CE5ADC0B8C66F6ADDE6A13D" : "..\/..",
+    "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LGLinearFlow",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/LGLinearFlow.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rpitting\/LGLinearFlow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46CC68CE0BDAF98A5DE39B08F2DD54A402DD1206"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ShareTheMeal\/app-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "812D9791DDA6B75B4CE5ADC0B8C66F6ADDE6A13D"
+    }
+  ]
+}
