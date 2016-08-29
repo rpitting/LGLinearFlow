@@ -33,12 +33,9 @@ public class LGMagnifyingLinearFlowLayout: UICollectionViewFlowLayout {
 
     override public func invalidateLayoutWithContext(context: UICollectionViewLayoutInvalidationContext) {
         super.invalidateLayoutWithContext(context)
-
-        if self.collectionView == nil {
-            return
-        }
         
-        let currentCollectionViewSize = self.collectionView!.bounds.size
+        guard let collectionView = self.collectionView else { return }
+        let currentCollectionViewSize = collectionView.bounds.size
         
         if !CGSizeEqualToSize(currentCollectionViewSize, self.lastCollectionViewSize) {
             self.configureInset()
@@ -47,21 +44,17 @@ public class LGMagnifyingLinearFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func configureInset() -> Void {
-        if self.collectionView == nil {
-            return
-        }
+        guard let collectionView = self.collectionView else { return }
 
-        let inset = self.collectionView!.bounds.size.width / 2 - self.itemSize.width / 2
-        self.collectionView!.contentInset = UIEdgeInsetsMake(0, inset, 0, inset)
-        self.collectionView!.contentOffset = CGPointMake(-inset, 0)
+        let inset = collectionView.bounds.size.width / 2 - self.itemSize.width / 2
+        collectionView.contentInset = UIEdgeInsetsMake(0, inset, 0, inset)
+        collectionView.contentOffset = CGPointMake(-inset, 0)
     }
     
     public override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        if self.collectionView == nil {
-            return proposedContentOffset
-        }
+        guard let collectionView = self.collectionView else { return proposedContentOffset }
         
-        let collectionViewSize = self.collectionView!.bounds.size
+        let collectionViewSize = collectionView.bounds.size
         let proposedRect = CGRectMake(proposedContentOffset.x, 0, collectionViewSize.width, collectionViewSize.height)
         
         let layoutAttributes = self.layoutAttributesForElementsInRect(proposedRect)
@@ -92,9 +85,9 @@ public class LGMagnifyingLinearFlowLayout: UICollectionViewFlowLayout {
             return proposedContentOffset
         }
         
-        var newOffsetX = candidateAttributes!.center.x - self.collectionView!.bounds.size.width / 2
+        var newOffsetX = candidateAttributes!.center.x - collectionView.bounds.size.width / 2
         
-        let offset = newOffsetX - self.collectionView!.contentOffset.x
+        let offset = newOffsetX - collectionView.contentOffset.x
         
         if (velocity.x < 0 && offset > 0) || (velocity.x > 0 && offset < 0) {
             let pageWidth = self.itemSize.width + self.minimumLineSpacing
@@ -109,25 +102,20 @@ public class LGMagnifyingLinearFlowLayout: UICollectionViewFlowLayout {
     }
     
     public override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        if !self.scaleItems || self.collectionView == nil {
-            return super.layoutAttributesForElementsInRect(rect)
-        }
+        guard let collectionView = self.collectionView where scaleItems != false else {
+            return super.layoutAttributesForElementsInRect(rect) }
         
-        let superAttributes = super.layoutAttributesForElementsInRect(rect)
-        
-        if superAttributes == nil {
-            return nil
-        }
-        
-        let contentOffset = self.collectionView!.contentOffset
-        let size = self.collectionView!.bounds.size
+        guard let superAttributes = super.layoutAttributesForElementsInRect(rect) else { return nil }
+                
+        let contentOffset = collectionView.contentOffset
+        let size = collectionView.bounds.size
 
         let visibleRect = CGRectMake(contentOffset.x, contentOffset.y, size.width, size.height)
         let visibleCenterX = CGRectGetMidX(visibleRect)
         
         var newAttributesArray = Array<UICollectionViewLayoutAttributes>()
 
-        for (_, attributes) in superAttributes!.enumerate() {
+        for (_, attributes) in superAttributes.enumerate() {
             let newAttributes = attributes.copy() as! UICollectionViewLayoutAttributes
             newAttributesArray.append(newAttributes)
             let distanceFromCenter = visibleCenterX - newAttributes.center.x
