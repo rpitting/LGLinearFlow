@@ -30,13 +30,13 @@ public class LGMagnifyingLinearFlowLayout: UICollectionViewFlowLayout {
     func setup() {
         self.scrollDirection = .Horizontal
     }
-
-    override public func invalidateLayoutWithContext(context: UICollectionViewLayoutInvalidationContext) {
-        super.invalidateLayoutWithContext(context)
+    
+    public override func prepareLayout() {
+        super.prepareLayout()
         
         guard let collectionView = self.collectionView else { return }
-        let currentCollectionViewSize = collectionView.bounds.size
         
+        let currentCollectionViewSize = collectionView.bounds.size
         if !CGSizeEqualToSize(currentCollectionViewSize, self.lastCollectionViewSize) {
             self.configureInset()
             self.lastCollectionViewSize = currentCollectionViewSize
